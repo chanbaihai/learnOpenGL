@@ -70,8 +70,8 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <IncludePath>D:\c++\Project1\include;$(IncludePath)</IncludePath>
-    <LibraryPath>D:\c++\Project1\lib;$(LibraryPath)</LibraryPath>
+    <IncludePath>D:\git\learnOpenGL\include;D:\c++\Project1\include;$(IncludePath)</IncludePath>
+    <LibraryPath>D:\git\learnOpenGL\lib;D:\c++\Project1\lib;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>

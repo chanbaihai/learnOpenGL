@@ -2,11 +2,11 @@
 out vec4 fragmentColor;
 
 in vec3 ourColor;
-in vec2 textCood;
+//in vec2 textCood;
 
-uniform sampler2D texture1;
-uniform sampler2D texture2;
+//uniform sampler2D texture1;
+//uniform sampler2D texture2;
 void main(){
-	fragmentColor = mix(texture(texture1, textCood), texture(texture2, textCood), 0.2);
+	fragmentColor = vec4(ourColor,1.0f);
 
 }
