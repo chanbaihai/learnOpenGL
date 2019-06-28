@@ -132,15 +132,23 @@
     <ClCompile Include="learn.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="fs.glsl" />
-    <None Include="vs.glsl" />
-  </ItemGroup>
-  <ItemGroup>
+    <ClInclude Include="resource.h" />
     <ClInclude Include="stb_image.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="awesomeface.png" />
     <Image Include="container.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project1.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\2.1.basic_lighting.fs" />
+    <None Include="shaders\2.1.basic_lighting.vs" />
+    <None Include="shaders\2.1.lamp.fs" />
+    <None Include="shaders\2.1.lamp.vs" />
+    <None Include="shaders\camera.glsl" />
+    <None Include="shaders\7.3.camera.glsl" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

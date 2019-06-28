@@ -26,15 +26,10 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="fs.glsl">
-      <Filter>资源文件</Filter>
-    </None>
-    <None Include="vs.glsl">
-      <Filter>资源文件</Filter>
-    </None>
-  </ItemGroup>
-  <ItemGroup>
     <ClInclude Include="stb_image.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
@@ -45,5 +40,30 @@
     <Image Include="awesomeface.png">
       <Filter>资源文件</Filter>
     </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Project1.rc">
+      <Filter>资源文件</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="shaders\2.1.basic_lighting.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="shaders\2.1.basic_lighting.vs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="shaders\2.1.lamp.fs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="shaders\2.1.lamp.vs">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="shaders\7.3.camera.glsl">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="shaders\camera.glsl">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
 </Project>

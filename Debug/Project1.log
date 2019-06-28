@@ -1,13 +1,20 @@
 ﻿  learn.cpp
-D:\git\learnOpenGL\learn.cpp(152,20): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(153,14): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(158,14): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(159,14): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(201,11): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(202,11): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(206,16): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(207,16): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(208,10): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(209,10): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
-D:\git\learnOpenGL\learn.cpp(270,17): warning C4244:  '-=': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(159,22): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(172,21): warning C4244:  '=': conversion from 'double' to 'T', possible loss of data
+D:\git\learnOpenGL\learn.cpp(172,21): warning C4244:         with
+D:\git\learnOpenGL\learn.cpp(172,21): warning C4244:         [
+D:\git\learnOpenGL\learn.cpp(172,21): warning C4244:             T=float
+D:\git\learnOpenGL\learn.cpp(172,21): warning C4244:         ]
+D:\git\learnOpenGL\learn.cpp(173,42): warning C4244:  '=': conversion from 'double' to 'T', possible loss of data
+D:\git\learnOpenGL\learn.cpp(173,42): warning C4244:         with
+D:\git\learnOpenGL\learn.cpp(173,42): warning C4244:         [
+D:\git\learnOpenGL\learn.cpp(173,42): warning C4244:             T=float
+D:\git\learnOpenGL\learn.cpp(173,42): warning C4244:         ]
+D:\git\learnOpenGL\learn.cpp(258,11): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(259,11): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(263,16): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(264,16): warning C4244:  'initializing': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(266,10): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(267,10): warning C4244:  '=': conversion from 'double' to 'float', possible loss of data
+D:\git\learnOpenGL\learn.cpp(276,28): warning C4244:  'argument': conversion from 'double' to 'float', possible loss of data
   Project1.vcxproj -> D:\git\learnOpenGL\Debug\Project1.exe
