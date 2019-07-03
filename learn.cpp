@@ -75,8 +75,8 @@ int main()
 
 	// build and compile our shader zprogram
 	// ------------------------------------
-	Shader lightingShader("shaders/1.colors.vs", "shaders/1.colors.fs");
-	Shader lampShader("shaders/1.lamp.vs", "shaders/1.lamp.fs");
+	Shader lightingShader("shaders/vcolors.glsl", "shaders/fcolors.glsl");
+	Shader lampShader("shaders/vlamp.glsl", "shaders/flamp.glsl");
 
 	// set up vertex data (and buffer(s)) and configure vertex attributes
 	// ------------------------------------------------------------------
@@ -159,14 +159,21 @@ int main()
 		float currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
-		angle = sin(currentFrame)<0?0: sin(currentFrame)* 360;
+		angle = std::fmax(sin(currentFrame),0)*360;
 		// input
 		// -----
 		processInput(window);
+		glm::vec3 lightColor;
+		lightColor.x = sin(currentFrame * 2.0f);
+		lightColor.y = sin(currentFrame * 0.7f);
+		lightColor.z = sin(currentFrame * 1.3f);
 
+		glm::vec3 diffuseColor = lightColor * glm::vec3(0.5);
+		glm::vec3 ambientColor = lightColor * glm::vec3(0.2f);
+		glm::vec3 specularColor = lightColor;
 		// render
 		// ------
-		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
+		glClearColor(0.1f, 0.1f, 0.1f, 0.4f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 		// change the light's position values over time (can be done anywhere in the render loop actually, but try to do it at least before using the light source positions)
 		lightPos.x = 1.0f + sin(glfwGetTime()) * 2.0f;
@@ -177,7 +184,14 @@ int main()
 		lightingShader.setVec3("lightColor", 1.0f, 1.0f, 1.0f);
 		lightingShader.setVec3("lightPos", lightPos);
 		lightingShader.setVec3("viewPos", camera.Position);
+		lightingShader.setVec3("material.ambient", 1.0f, 0.5f, 0.31f);
+		lightingShader.setVec3("material.diffuse", 1.0f, 0.5f, 0.31f);
+		lightingShader.setVec3("material.specular", 0.5f, 0.5f, 0.5f);
+		lightingShader.setFloat("material.shininess", 32.0f);
 
+		lightingShader.setVec3("light.ambient", ambientColor);
+		lightingShader.setVec3("light.diffuse", diffuseColor);
+		lightingShader.setVec3("light.specular", specularColor);
 		// view/projection transformations
 		glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
 		glm::mat4 view = camera.GetViewMatrix();
